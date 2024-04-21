@@ -1,4 +1,4 @@
-# DBSync4 - Database Schema Sync Utility
+# DBSync4 - SQL Database Schema Sync Utility
 
 This utility is designed to synchronize the schema between two SQL databases.
 It does this by reading in the schema for two databases, discovering the differences,
