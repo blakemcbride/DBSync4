@@ -8,8 +8,8 @@ Here is an example of how it is used.  Let's say you have a production system an
 a development system - each with their own database.  At the point of deployment 
 both schemas are the same.  Then, as you develop the system further, you make schema 
 changes to the development database.  When you're ready to deploy you need a script to 
-update the production system to be the same as your development system.  
-DBSync 4 creates the needed SQL update script by reading the schema of both and generating
+update the production system to be the same as your development system.  DBSync 4 
+creates the needed SQL update script by reading the schema of both and generating
 the SQL update script.
 
 ## More Details
@@ -29,6 +29,8 @@ The text change script it generates consists of three sections as follows:
 In general, I delete the first and third sections and just use the second.  However,
 be careful, sometimes new foreign keys or indexes only appear in the third section and must be
 copied to the second section before deleting the third.
+
+Run ```build.sh``` to build.
 
 You may want to take a look at [Stack360](https://github.com/blakemcbride/Stack360-Backend)
 It contains code to perform automatic schema updates when production systems are updated.
